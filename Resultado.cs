@@ -12,7 +12,11 @@ namespace PrimerParcial
         public DateTime FechaJuego { get; set; }
         public string NameEquipoRival { get; set; }
         public int NoGolesAnotados { get; set; }
+    }
 
-
+    class ResultadoJugador
+    {
+        public string NombreJugador { get; set; }
+        public int NumeroDeGoles { get; set; }
     }
 }

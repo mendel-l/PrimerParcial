@@ -46,7 +46,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(654, 250);
+            this.label3.Location = new System.Drawing.Point(655, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 32);
             this.label3.TabIndex = 40;
@@ -56,7 +56,7 @@
             // 
             this.labelMenor.AutoSize = true;
             this.labelMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMenor.Location = new System.Drawing.Point(654, 211);
+            this.labelMenor.Location = new System.Drawing.Point(655, 199);
             this.labelMenor.Name = "labelMenor";
             this.labelMenor.Size = new System.Drawing.Size(150, 16);
             this.labelMenor.TabIndex = 39;
@@ -66,7 +66,7 @@
             // 
             this.labelMayor.AutoSize = true;
             this.labelMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMayor.Location = new System.Drawing.Point(654, 194);
+            this.labelMayor.Location = new System.Drawing.Point(655, 182);
             this.labelMayor.Name = "labelMayor";
             this.labelMayor.Size = new System.Drawing.Size(150, 16);
             this.labelMayor.TabIndex = 38;
@@ -74,7 +74,7 @@
             // 
             // buttonMostrar
             // 
-            this.buttonMostrar.Location = new System.Drawing.Point(503, 82);
+            this.buttonMostrar.Location = new System.Drawing.Point(453, 28);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(125, 50);
             this.buttonMostrar.TabIndex = 37;
@@ -84,7 +84,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(503, 306);
+            this.buttonExit.Location = new System.Drawing.Point(508, 277);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(125, 41);
             this.buttonExit.TabIndex = 36;
@@ -93,7 +93,7 @@
             // 
             // buttonPropietarioCuotaAlta
             // 
-            this.buttonPropietarioCuotaAlta.Location = new System.Drawing.Point(503, 250);
+            this.buttonPropietarioCuotaAlta.Location = new System.Drawing.Point(508, 221);
             this.buttonPropietarioCuotaAlta.Name = "buttonPropietarioCuotaAlta";
             this.buttonPropietarioCuotaAlta.Size = new System.Drawing.Size(125, 50);
             this.buttonPropietarioCuotaAlta.TabIndex = 35;
@@ -102,7 +102,7 @@
             // 
             // buttonOrdanar3alta3Baja
             // 
-            this.buttonOrdanar3alta3Baja.Location = new System.Drawing.Point(503, 194);
+            this.buttonOrdanar3alta3Baja.Location = new System.Drawing.Point(508, 165);
             this.buttonOrdanar3alta3Baja.Name = "buttonOrdanar3alta3Baja";
             this.buttonOrdanar3alta3Baja.Size = new System.Drawing.Size(125, 50);
             this.buttonOrdanar3alta3Baja.TabIndex = 34;
@@ -111,7 +111,7 @@
             // 
             // buttonCuotaxMantenimiento
             // 
-            this.buttonCuotaxMantenimiento.Location = new System.Drawing.Point(503, 138);
+            this.buttonCuotaxMantenimiento.Location = new System.Drawing.Point(508, 109);
             this.buttonCuotaxMantenimiento.Name = "buttonCuotaxMantenimiento";
             this.buttonCuotaxMantenimiento.Size = new System.Drawing.Size(125, 50);
             this.buttonCuotaxMantenimiento.TabIndex = 33;

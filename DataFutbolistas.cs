@@ -15,14 +15,20 @@ namespace PrimerParcial
     {
         List<Jugador> jugadores = new List<Jugador>();
         List<Resultado> resultadoPartido = new List<Resultado>();
+
+        List<ResultadoJugador> resdeljugador = new List<ResultadoJugador>();
         public DataFutbolistas()
         {
             InitializeComponent();
-        }
 
-        void ReadDepartamento()
+            ReadJugador();
+            ReadGol();
+            ActualizarGred();
+
+        }
+        void ReadJugador()
         {
-            FileStream stream = new FileStream(@"Departamentos.txt", FileMode.Open, FileAccess.Read);
+            FileStream stream = new FileStream(@"Jugador.txt", FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
 
             while (reader.Peek() > -1)
@@ -30,22 +36,23 @@ namespace PrimerParcial
                 var linea = reader.ReadLine();
                 var partes = linea.Split('|');
 
-                var dato = new Departamentos();
-                dato.NoIdentificacion = partes[0];
-                dato.Departamento = partes[1];
+                var dato = new Jugador();
+                dato.IDjugador = partes[0];
+                dato.Name = partes[1];
+                dato.Equipo = partes[2];
 
-                departamento.Add(dato);
+                jugadores.Add(dato);
             }
             reader.Close();
 
-            comboBoxDepartamentos.DataSource = departamento;
-            comboBoxDepartamentos.DisplayMember = "Departamento";
-            comboBoxDepartamentos.Refresh();
+            comboBoxName.DataSource = jugadores;
+            comboBoxName.DisplayMember = "Name";
+            comboBoxName.Refresh();
         }
 
-        void ReadTemperatura()
+        void ReadGol()
         {
-            FileStream stream = new FileStream(@"Temperatura.txt", FileMode.Open, FileAccess.Read);
+            FileStream stream = new FileStream(@"GolesAnotados.txt", FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
 
             while (reader.Peek() > -1)
@@ -53,21 +60,46 @@ namespace PrimerParcial
                 var linea = reader.ReadLine();
                 var partes = linea.Split('|');
 
-                var dato = new ClimaDepartamento();
+                var dato = new Resultado();
+                dato.IDjugador = partes[0];
+                dato.FechaJuego = DateTime.Parse(partes[1]);
+                dato.NameEquipoRival = partes[2];
+                dato.NoGolesAnotados = Convert.ToInt32(partes[3]);
 
-                dato.NoIdentificacion = partes[0];
-                dato.Departamento = departamento.First(x => x.NoIdentificacion == partes[0]).Departamento;
-                dato.Clima = partes[1];
-                dato.FechaClima = DateTime.Parse(partes[2]);
-
-                climaDep.Add(dato);
+                resultadoPartido.Add(dato);
             }
             reader.Close();
+        }
+
+        void ActualizarGred()
+        {
+            dataGridViewPropietarios.DataSource = null;
+            dataGridViewPropietarios.Refresh();
+            var SerchNamePlayer = ((Jugador)comboBoxName.SelectedValue).Name;
+            dataGridViewPropietarios.DataSource = jugadores.Where(x => x.Name == SerchNamePlayer).ToList();
+            dataGridViewPropietarios.Refresh();
         }
 
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
+            ReadJugador();
+            ReadGol();
 
+            for (int i = 0; i < jugadores.Count; i++)
+            {
+                for (int j = 0; j < resultadoPartido.Count; j++)
+                {
+                    if (jugadores[i].IDjugador == resultadoPartido[j].IDjugador)
+                    {
+                        ResultadoJugador Resumenjugador = new ResultadoJugador();
+                        Resumenjugador.NombreJugador = jugadores[j].Name;
+                        Resumenjugador.NumeroDeGoles = resultadoPartido[j].NoGolesAnotados;
+
+                        resdeljugador.Add(Resumenjugador);
+                    }
+                }
+            }
+            ActualizarGred();
         }
     }
 }
