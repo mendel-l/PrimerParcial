@@ -28,49 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelMenor = new System.Windows.Forms.Label();
-            this.labelMayor = new System.Windows.Forms.Label();
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonPropietarioCuotaAlta = new System.Windows.Forms.Button();
-            this.buttonOrdanar3alta3Baja = new System.Windows.Forms.Button();
-            this.buttonCuotaxMantenimiento = new System.Windows.Forms.Button();
-            this.dataGridViewPropietarios = new System.Windows.Forms.DataGridView();
+            this.buttonOrdanarGoles = new System.Windows.Forms.Button();
+            this.dataGridViewResultado = new System.Windows.Forms.DataGridView();
             this.comboBoxName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPropietarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResultado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(655, 238);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 32);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Mostrar Propietario \r\n  Con Cuota Mayor";
-            // 
-            // labelMenor
-            // 
-            this.labelMenor.AutoSize = true;
-            this.labelMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMenor.Location = new System.Drawing.Point(655, 199);
-            this.labelMenor.Name = "labelMenor";
-            this.labelMenor.Size = new System.Drawing.Size(150, 16);
-            this.labelMenor.TabIndex = 39;
-            this.labelMenor.Text = "Mostrar Cuota Menor";
-            // 
-            // labelMayor
-            // 
-            this.labelMayor.AutoSize = true;
-            this.labelMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMayor.Location = new System.Drawing.Point(655, 182);
-            this.labelMayor.Name = "labelMayor";
-            this.labelMayor.Size = new System.Drawing.Size(150, 16);
-            this.labelMayor.TabIndex = 38;
-            this.labelMayor.Text = "Mostrar Cuota Mayor";
             // 
             // buttonMostrar
             // 
@@ -93,38 +59,30 @@
             // 
             // buttonPropietarioCuotaAlta
             // 
-            this.buttonPropietarioCuotaAlta.Location = new System.Drawing.Point(508, 221);
+            this.buttonPropietarioCuotaAlta.Location = new System.Drawing.Point(508, 206);
             this.buttonPropietarioCuotaAlta.Name = "buttonPropietarioCuotaAlta";
             this.buttonPropietarioCuotaAlta.Size = new System.Drawing.Size(125, 50);
             this.buttonPropietarioCuotaAlta.TabIndex = 35;
-            this.buttonPropietarioCuotaAlta.Text = "Ordenar por Propietario con Cuota mas Alta";
+            this.buttonPropietarioCuotaAlta.Text = "Promedio";
             this.buttonPropietarioCuotaAlta.UseVisualStyleBackColor = true;
             // 
-            // buttonOrdanar3alta3Baja
+            // buttonOrdanarGoles
             // 
-            this.buttonOrdanar3alta3Baja.Location = new System.Drawing.Point(508, 165);
-            this.buttonOrdanar3alta3Baja.Name = "buttonOrdanar3alta3Baja";
-            this.buttonOrdanar3alta3Baja.Size = new System.Drawing.Size(125, 50);
-            this.buttonOrdanar3alta3Baja.TabIndex = 34;
-            this.buttonOrdanar3alta3Baja.Text = "Mostrar Mayor Menor";
-            this.buttonOrdanar3alta3Baja.UseVisualStyleBackColor = true;
+            this.buttonOrdanarGoles.Location = new System.Drawing.Point(508, 150);
+            this.buttonOrdanarGoles.Name = "buttonOrdanarGoles";
+            this.buttonOrdanarGoles.Size = new System.Drawing.Size(125, 50);
+            this.buttonOrdanarGoles.TabIndex = 34;
+            this.buttonOrdanarGoles.Text = "Ordenar Goles";
+            this.buttonOrdanarGoles.UseVisualStyleBackColor = true;
+            this.buttonOrdanarGoles.Click += new System.EventHandler(this.buttonOrdanarGoles_Click);
             // 
-            // buttonCuotaxMantenimiento
+            // dataGridViewResultado
             // 
-            this.buttonCuotaxMantenimiento.Location = new System.Drawing.Point(508, 109);
-            this.buttonCuotaxMantenimiento.Name = "buttonCuotaxMantenimiento";
-            this.buttonCuotaxMantenimiento.Size = new System.Drawing.Size(125, 50);
-            this.buttonCuotaxMantenimiento.TabIndex = 33;
-            this.buttonCuotaxMantenimiento.Text = "Ordanar por Cuota";
-            this.buttonCuotaxMantenimiento.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewPropietarios
-            // 
-            this.dataGridViewPropietarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPropietarios.Location = new System.Drawing.Point(43, 98);
-            this.dataGridViewPropietarios.Name = "dataGridViewPropietarios";
-            this.dataGridViewPropietarios.Size = new System.Drawing.Size(450, 225);
-            this.dataGridViewPropietarios.TabIndex = 32;
+            this.dataGridViewResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewResultado.Location = new System.Drawing.Point(43, 98);
+            this.dataGridViewResultado.Name = "dataGridViewResultado";
+            this.dataGridViewResultado.Size = new System.Drawing.Size(450, 225);
+            this.dataGridViewResultado.TabIndex = 32;
             // 
             // comboBoxName
             // 
@@ -149,37 +107,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 411);
+            this.ClientSize = new System.Drawing.Size(653, 411);
             this.Controls.Add(this.comboBoxName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelMenor);
-            this.Controls.Add(this.labelMayor);
             this.Controls.Add(this.buttonMostrar);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonPropietarioCuotaAlta);
-            this.Controls.Add(this.buttonOrdanar3alta3Baja);
-            this.Controls.Add(this.buttonCuotaxMantenimiento);
-            this.Controls.Add(this.dataGridViewPropietarios);
+            this.Controls.Add(this.buttonOrdanarGoles);
+            this.Controls.Add(this.dataGridViewResultado);
             this.Name = "DataFutbolistas";
             this.Text = "DataFutbolistas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPropietarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelMenor;
-        private System.Windows.Forms.Label labelMayor;
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonPropietarioCuotaAlta;
-        private System.Windows.Forms.Button buttonOrdanar3alta3Baja;
-        private System.Windows.Forms.Button buttonCuotaxMantenimiento;
-        private System.Windows.Forms.DataGridView dataGridViewPropietarios;
+        private System.Windows.Forms.Button buttonOrdanarGoles;
+        private System.Windows.Forms.DataGridView dataGridViewResultado;
         private System.Windows.Forms.ComboBox comboBoxName;
         private System.Windows.Forms.Label label2;
     }

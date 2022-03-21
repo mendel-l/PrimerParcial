@@ -73,11 +73,11 @@ namespace PrimerParcial
 
         void ActualizarGred()
         {
-            dataGridViewPropietarios.DataSource = null;
-            dataGridViewPropietarios.Refresh();
+            dataGridViewResultado.DataSource = null;
+            dataGridViewResultado.Refresh();
             var SerchNamePlayer = ((Jugador)comboBoxName.SelectedValue).Name;
-            dataGridViewPropietarios.DataSource = jugadores.Where(x => x.Name == SerchNamePlayer).ToList();
-            dataGridViewPropietarios.Refresh();
+            dataGridViewResultado.DataSource = jugadores.Where(x => x.Name == SerchNamePlayer).ToList();
+            dataGridViewResultado.Refresh();
         }
 
         private void buttonMostrar_Click(object sender, EventArgs e)
@@ -100,6 +100,20 @@ namespace PrimerParcial
                 }
             }
             ActualizarGred();
+        }
+
+        private void CargarGrid(List<ResultadoJugador> auxData)
+        {
+            dataGridViewResultado.DataSource = null;
+            dataGridViewResultado.Refresh();
+            dataGridViewResultado.DataSource = auxData;
+            dataGridViewResultado.Refresh();
+        }
+
+        private void buttonOrdanarGoles_Click(object sender, EventArgs e)
+        {
+            resdeljugador = resdeljugador.OrderByDescending(c => c.NumeroDeGoles).ToList();
+            CargarGrid(resdeljugador);
         }
     }
 }
