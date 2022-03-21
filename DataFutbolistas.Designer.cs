@@ -56,6 +56,7 @@
             this.buttonExit.TabIndex = 36;
             this.buttonExit.Text = "salir";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonPropietarioCuotaAlta
             // 
@@ -65,6 +66,7 @@
             this.buttonPropietarioCuotaAlta.TabIndex = 35;
             this.buttonPropietarioCuotaAlta.Text = "Promedio";
             this.buttonPropietarioCuotaAlta.UseVisualStyleBackColor = true;
+            this.buttonPropietarioCuotaAlta.Click += new System.EventHandler(this.buttonPropietarioCuotaAlta_Click);
             // 
             // buttonOrdanarGoles
             // 

@@ -109,7 +109,6 @@ namespace PrimerParcial
         {
             DataFutbolistas form2 = new DataFutbolistas();
             form2.Show();
-
             this.Hide();
         }
 

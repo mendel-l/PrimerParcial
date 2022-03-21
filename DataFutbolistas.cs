@@ -115,5 +115,15 @@ namespace PrimerParcial
             resdeljugador = resdeljugador.OrderByDescending(c => c.NumeroDeGoles).ToList();
             CargarGrid(resdeljugador);
         }
+
+        private void buttonPropietarioCuotaAlta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
